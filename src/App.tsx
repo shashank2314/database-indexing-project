@@ -189,7 +189,7 @@ function App() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               Database Indexing Techniques and Their Evaluation
             </h3>
-            <p className="text-gray-600 mb-1">SHASHANK KUMAR</p>
+            <p className="text-gray-600 mb-1">SHASHANK KUMAR and AMIT BARKHANE</p>
             <p className="text-gray-500 text-sm">© 2025. All rights reserved.</p>
           </div>
         </div>
