@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Search, Download, Home, BookOpen, TrendingUp, BarChart3, GitCompare, Sparkles, FileText ,Play} from 'lucide-react';
+import { Menu, X, Search, Download, Home, BookOpen, TrendingUp, BarChart3, GitCompare, Sparkles, FileText, Play } from 'lucide-react';
 import HomePage from './pages/HomePage';
 import Introduction from './pages/Introduction';
 import Fundamentals from './pages/Fundamentals';
@@ -11,6 +11,7 @@ import FutureDirections from './pages/FutureDirections';
 import Conclusion from './pages/Conclusion';
 import References from './pages/References';
 import IndexingVisualiser from './pages/IndexingVisualiser';
+import CodeVisualiser from './pages/CodeVisuliser';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
   const navigation = [
     { id: 'home', name: 'Home', icon: Home },
     { id: 'Visualiser', name: 'Indexing Visualiser', icon: Play },
+    { id: 'CVisualiser', name: 'Code Visualiser', icon: Play },
     { id: 'introduction', name: 'Introduction', icon: BookOpen },
     { id: 'fundamentals', name: 'Fundamentals', icon: BookOpen },
     { id: 'classical', name: 'Classical Indexing', icon: FileText },
@@ -37,7 +39,9 @@ function App() {
       case 'home':
         return <HomePage onNavigate={setCurrentPage} />;
       case 'Visualiser':
-        return <IndexingVisualiser/>;
+        return <IndexingVisualiser />;
+      case 'CVisualiser':
+        return <CodeVisualiser />;
       case 'introduction':
         return <Introduction />;
       case 'fundamentals':
@@ -115,11 +119,10 @@ function App() {
                       setCurrentPage(item.id);
                       setMobileMenuOpen(false);
                     }}
-                    className={`w-full px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-2 ${
-                      currentPage === item.id
+                    className={`w-full px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-2 ${currentPage === item.id
                         ? 'bg-blue-100 text-blue-700'
                         : 'text-gray-700 hover:bg-gray-100'
-                    }`}
+                      }`}
                   >
                     <Icon className="w-4 h-4" />
                     <span>{item.name}</span>
@@ -155,11 +158,10 @@ function App() {
                     <button
                       key={item.id}
                       onClick={() => setCurrentPage(item.id)}
-                      className={`w-full text-left px-2 py-1.5 rounded text-sm transition-colors ${
-                        currentPage === item.id
+                      className={`w-full text-left px-2 py-1.5 rounded text-sm transition-colors ${currentPage === item.id
                           ? 'bg-blue-100 text-blue-700 font-medium'
                           : 'text-gray-600 hover:bg-gray-100'
-                      }`}
+                        }`}
                     >
                       {item.name}
                     </button>
@@ -189,11 +191,63 @@ function App() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               Database Indexing Techniques and Their Evaluation
             </h3>
+
             <p className="text-gray-600 mb-1">SHASHANK KUMAR and AMIT BARKHANE</p>
-            <p className="text-gray-500 text-sm">© 2025. All rights reserved.</p>
+
+            {/* Supervisor Link */}
+            <p className="text-gray-600 mb-1">
+              Under supervision of{" "}
+              <a
+                href="https://mnit.ac.in/dept_cse/profile?fid=RK6J"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                Prof. Dinesh Gopalani
+              </a>
+            </p>
+
+            {/* GitHub Link */}
+            <a
+              href="https://github.com/shashank2314/database-indexing-project"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-black flex justify-center items-center gap-2 mt-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M12 .5C5.649.5.5 5.649.5 12c0 5.088 3.292 9.387 7.865 10.907.575.106.785-.25.785-.557 
+            0-.274-.01-1-.015-1.962-3.2.695-3.878-1.542-3.878-1.542-.523-1.329-1.278-1.683-1.278-1.683-1.044-.714.08-.699.08-.699 
+            1.155.081 1.763 1.186 1.763 1.186 1.027 1.76 2.693 1.252 3.35.958.104-.744.402-1.252.732-1.54-2.555-.291-5.238-1.277-5.238-5.683 
+            0-1.255.454-2.282 1.194-3.087-.12-.292-.518-1.467.113-3.06 0 0 .974-.312 3.19 1.18A11.14 11.14 0 0 1 12 6.844c.987.005 
+            1.98.133 2.91.39 2.214-1.492 3.187-1.18 3.187-1.18.633 1.593.235 2.768.116 3.06.744.805 1.19 1.832 1.19 3.087 
+            0 4.419-2.688 5.387-5.252 5.673.41.352.78 1.041.78 2.101 0 1.517-.014 2.74-.014 3.11 
+            0 .309.207.67.79.556C20.213 21.382 23.5 17.086 23.5 12 23.5 5.649 18.351.5 12 .5z" />
+              </svg>
+              <span>GitHub Repository</span>
+            </a>
+
+            {/* Contact */}
+            <p className="text-gray-600 mt-2">
+              Contact:
+              <a
+                href="mailto:shashankkumar.iiitk@gmail.com"
+                className="text-blue-600 hover:underline ml-1"
+              >
+                shashankkumar.iiitk@gmail.com
+              </a>
+            </p>
+
+            <p className="text-gray-500 text-sm mt-3">© 2025. All rights reserved.</p>
           </div>
         </div>
       </footer>
+
     </div>
   );
 }

@@ -394,19 +394,6 @@ export default function References() {
             </div>
           </section>
 
-          <div className="bg-blue-600 text-white p-8 rounded-lg">
-            <h3 className="text-2xl font-bold mb-4">Citation Recommendation</h3>
-            <p className="leading-relaxed mb-4">
-              If you use this research project as a reference, please cite the key papers and systems that
-              influenced your work. The database research community values proper attribution and builds
-              on a foundation of shared knowledge.
-            </p>
-            <p className="text-sm text-blue-100">
-              For the most up-to-date references, regularly check recent proceedings from SIGMOD, VLDB,
-              and ICDE conferences. The field of database indexing continues to evolve rapidly with new
-              innovations appearing frequently.
-            </p>
-          </div>
         </div>
       </div>
     </div>
