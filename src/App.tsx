@@ -198,7 +198,7 @@ function App() {
             <p className="text-gray-600 mb-1">
               Under supervision of{" "}
               <a
-                href="https://mnit.ac.in/dept_cse/profile?fid=RK6J"
+                href="https://www.mnit.ac.in/dept_cse/profile?fid=RK6J"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"
